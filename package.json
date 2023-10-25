@@ -9,7 +9,7 @@
     "lint": "eslint -c config/eslintrc.yml --ext js src test config",
     "test": "mocha --config config/mocharc.cjs",
     "cypress": "cypress run",
-    "build": "NODE_OPTIONS=--openssl-legacy-provider webpack --mode production --config config/webpack.config.js",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack --mode production --config config/webpack.config.js",
     "start": "npx http-server",
     "watch": "npm-watch"
   },
@@ -62,5 +62,8 @@
     "npm-watch": "^0.11.0",
     "webpack": "^5.64.2",
     "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
   }
 }
